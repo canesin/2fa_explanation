@@ -1,9 +1,9 @@
 Why there is no 2FA for the NEON Wallet
 ================
 2 Factor Authentication or 2FA as a Time-based One-Time Password (TOTP), the thing most people refer to when speaking of Google Auth, is based in an algorithm where you take a private key (auth key) that is hashed together with the time since an agreed time (T0). After that you take the hash as an integer and use the 6 first numbers; the ones that appear in the app. The logic is as follows:
-```
+
 **totp_code = 2FA(auth key, T0);**
-```
+
 So in order to verify a 2FA TOTP **both ends need to hold the auth key**. Since this is a decentralized project, that would mean the wallet itself needs to hold the 2FA auth<!--does the A not stand for auth?--> key, offering zero protection from an attacker, who could just read the auth key from the storage. For 2FA to work, the auth key needs to be stored in a safe and trustworthy remote server where the decryption must be done, so that the encryption keys are not available at the (possibly) compromised computer.
 
 **So: there is no 2FA in local crypto wallets because, not only does it offer zero protection; it could transmit a false sense of protection.**
