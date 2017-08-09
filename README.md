@@ -1,4 +1,4 @@
-2FA as Time-based One-Time Password algorithm (TOTP), what most people referring to when speaking of Google Auth are based in a algorithm where you take a private key (auth key) that is hashed together with the time since an agreed time (T0), after that you take the hash as a integer and use the 6 first numbers ... the ones that appear into the app. The logic is:
+2FA as Time-based One-Time Password (TOTP), the thing most people refer to when speaking of Google Auth are based in a algorithm where you take a private key (auth key) that is hashed together with the time since an agreed time (T0), after that you take the hash as a integer and use the 6 first numbers ... the ones that appear into the app. The logic is:
 
 **totp_code = 2FA(auth key, T0);**
 
